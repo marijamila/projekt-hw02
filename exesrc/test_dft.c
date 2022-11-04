@@ -22,7 +22,7 @@ void main() {
 
     cmplx_dft(x_n, X_k, n);
 
-    int fd = open("./bin/X_k.bin", O_CREAT | O_WRONLY);
+    int fd = open("./bin/X_k.bin", O_CREAT | O_WRONLY, 00700);
     for (int j = 0; j < n; j++) {
         void *r = (void *) &X_k[j][0];
         void *i = (void *) &X_k[j][1];

@@ -16,7 +16,7 @@ void main() {
     cmplx_t xn[n];
     cmplx_t X_k[n];
 
-    int fd = open("./bin/X_k.bin", O_RDONLY);
+    int fd = open("./bin/X_k.bin", O_RDONLY, 00700);
     for (int j = 0; j < n; j++) {
         int real = read_word(fd);
         int imag = read_word(fd);
