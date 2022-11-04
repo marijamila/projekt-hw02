@@ -13,7 +13,7 @@ EXE=exe/test_dft.elf exe/test_idft.elf
 all: $(EXE)
 
 exe/%.elf: exesrc/%.o $(OBJ)
-	gcc $(OBJ) -o $@ -lm
+	gcc $(OBJ) $< -o $@ -lm
 
 %.o: %.c
 	gcc -c $< $(CFLAGS) -o $@
